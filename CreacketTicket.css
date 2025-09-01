@@ -1,0 +1,32 @@
+  * {
+      font-family: "Outfit", sans-serif;
+  }
+
+
+    .rightmain {
+      flex-grow: 1;
+      padding: 20px;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+  }
+  .custom-card {
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .form-label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .btn-dark {
+    font-size: 14px;
+    font-weight: 500;
+  }
