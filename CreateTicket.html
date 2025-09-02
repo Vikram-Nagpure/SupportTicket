@@ -4,42 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>create ticket</title>
     <!-- file css -->
-    <link rel="stylesheet" href="CreacketTicket.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/CreacketTicket.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
 
     <div class="mainpage d-flex flex-wrap flex-md-nowrap">
-        
-
         <div class="rightmain" id="rightmain">
             <div class="container-fluid">
                 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 mt-2">
                     <!-- Left Section -->
                     <div>
                         <h4 class="mb-0 p-2">Create Ticket</h4>
-                        <p class="text-muted"><i class="bi bi-info-circle p-2 mt-1"></i>Have an issue? Describe it in
-                            detail below</p>
+                        <p class="text-muted"><i class="bi bi-info-circle p-2 mt-1"></i>
+                            Have an issue? Describe it in detail below</p>
                     </div>
                     <!-- right button -->
                     <div>
-                        <a href="SupportTicket.html"><button class="btn btn-create"
+                        <a href="SupportTicket.php"><button class="btn btn-create"
                                 style="background-color:#6366F1; color:white;"><i
                                     class="bi bi-arrow-left"></i>Back</button></a>
                     </div>
@@ -47,62 +45,118 @@
 
                 <div class="container my-4 p-0">
                     <div class="card shadow-sm p-4 custom-card">
-                        <form>
+                        <form method="post" action="https://admin.threecoding.com/save_ticket.php"
+                            enctype="multipart/form-data">
+                            <input type="hidden" name="parent_site" id="parent_site" value="">
+                            <input type="hidden" name="user_id" id="user_id" value="">
+
+
                             <div class="row g-3">
-                                <!-- Subject -->
                                 <div class="col-md-6">
+                                    <label for="f_name" class="form-label">First Name</label>
+                                    <input type="text" name="f_name" class="form-control" id="f_name"
+                                        placeholder="Enter First Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="l_name" class="form-label">Last Name</label>
+                                    <input type="text" name="l_name" class="form-control" id="l_name"
+                                        placeholder="Enter Last Name " required>
+                                </div>
+                               
+                                <!-- Subject -->
+                                <div class="col-md-12">
                                     <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                                    <input type="text" name="subject" class="form-control" id="subject"
+                                        placeholder="Enter subject" required>
+                                </div>
+
+                                 <div class="col-md-6">
+                                    <label for="Contect" class="form-label">Contect</label>
+                                    <input type="number" name="Contect" class="form-control" id="Contect"
+                                        placeholder="Enter Contect " required>
                                 </div>
 
                                 <!-- Category -->
                                 <div class="col-md-6">
                                     <label for="category" class="form-label">Priority</label>
-                                    <select id="category" class="form-select">
-                                        <option selected disabled>select Priority</option>
-                                        <option value="general">Apporove</option>
-                                        <option value="technical">Ansswer</option>
-                                        <option value="billing">Rejected</option>
+                                    <select id="priority" name="priority" class="form-select" required>
+                                        <option value="" selected disabled>Select Priority</option>
+                                        <option value="low">Low - Can wait</option>
+                                        <option value="medium">Medium - Needs attention</option>
+                                        <option value="high">High - Urgent</option>
                                     </select>
                                 </div>
 
-                                <div class="col-md-6">
-                                    <label for="category" class="form-label">Deparment</label>
-                                    <select id="category" class="form-select">
-                                        <option selected disabled>select Deparment</option>
-                                        <option value="general">Technical</option>
-                                        <option value="billing">Billing</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="category" class="form-label">File</label>
-                                    <input type="file" class="form-control" id="File">
-                                </div>
+                                
 
                                 <!-- Description -->
                                 <div class="col-12">
                                     <label for="description" class="form-label">Description</label>
-                                    <textarea id="description" class="form-control" rows="5"
-                                        placeholder="Enter description"></textarea>
+                                    <textarea id="description" name="description" class="form-control" rows="5"
+                                        placeholder="Enter description" required></textarea>
                                 </div>
+                                <div class="col-md-12">
+  <label for="File" class="form-label">File</label>
+  <input type="file" name="file" class="form-control" id="File" 
+         accept=".jpg,.jpeg,.png,.mp4" onchange="validateFile(this)">
+  <div id="fileError" class="text-danger small mt-1"></div>
+</div>
                             </div>
 
                             <!-- Submit Button -->
                             <div class="text-end mt-3">
-                                <button type="submit" class="btn btn-dark rounded-3 px-4">Create Ticket</button>
+                                <button type="submit" name="create_ticket"
+                                    class="btn btn-dark rounded-3 px-4">Create Ticket</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+        window.addEventListener("message", function(event) {
+            if(event.data.type === "parentInfo") {
+                document.getElementById("parent_site").value = event.data.hostname;
+                document.getElementById("user_id").value = event.data.user_id;
+            }
+        });
+
+        // Request parent info
+        if (window.parent !== window) {
+            window.parent.postMessage({ type: "getParentInfo" }, "*");
+        }
+
+
+
+        ////////  File Uplode Js 
+
+         function validateFile(input) {
+    const file = input.files[0];
+    const errorDiv = document.getElementById("fileError");
+    errorDiv.textContent = "";
+
+    if (file) {
+      const validTypes = ["image/jpeg", "image/png", "video/mp4"];
+      const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+
+      if (!validTypes.includes(file.type)) {
+        errorDiv.textContent = "Only JPG, PNG images and MP4 videos are allowed.";
+        input.value = ""; // reset input
+        return;
+      }
+
+      if (file.size > maxSize) {
+        errorDiv.textContent = "File size must be less than 5 MB.";
+        input.value = ""; // reset input
+        return;
+      }
+    }
+  }
+        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
-
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
-
 </html>

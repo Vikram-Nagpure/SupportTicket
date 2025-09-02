@@ -1,91 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- file css -->
     <link rel="stylesheet" href="ticketDetail.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-</head>
+  </head>
 
-<body>
+  <body>
 
     <div class="mainpage d-flex flex-wrap flex-md-nowrap">
 
-        <div class="rightmain" id="rightmain">
-            <div class="container-fluid">
-                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 mt-2">
-                    <!-- Left Section -->
-                    <div>
-                        <h4 class="mb-0 p-2">Ticket Ref: SUP-000003-250820</h4>
+      <div class="rightmain" id="rightmain">
+        <div class="container-fluid">
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center mb-3 mt-2">
+            <!-- Left Section -->
+            <div>
+              <h4 class="mb-0 p-2">Ticket Ref: SUP-000003-250820</h4>
 
-                    </div>
-                    <!-- right button -->
-                    <div>
-                        <a href="Support.php"><button class="btn btn-create"
-                                style="background-color:#6366F1; color:white;"><i
-                                    class="bi bi-arrow-left"></i>Back</button></a>
-                    </div>
+            </div>
+            <!-- right button -->
+            <div>
+              <a href="SupportTicket.html"><button class="btn btn-create"
+                  style="background-color:#6366F1; color:white;"><i
+                    class="bi bi-arrow-left"></i>Back</button></a>
+            </div>
+          </div>
+
+          <!-- Chat Body -->
+          <div class="chat-body flex-grow-1" style="overflow-y: auto; height: 50vh;">
+
+            <!-- Left Message (Received) -->
+            <!-- <div class="leftMsg mb-3 d-flex align-items-start">
+             
+              <div class="avtar me-2">
+                <img src="https://threecoding.com/assets/img/2.png"
+                  alt="Avatar">
+              </div>
+
+            
+              <div class="p-3 rounded shadow-sm lefttxtdiv"
+                style="width: 40%; background:#f9f9f9; text-align: justify;">
+                Hello TEST
+              </div>
+            </div> -->
+
+            <div class="email-card gap-3">
+              <div class="headerprofile d-flex gap-3">
+                <div class="avatar">RY</div>
+                <div class="nameinfo">
+                  <div class="sender-name">Rajpal Yadav</div>
+                  <div class="recipient">www.threecoding.com</div>
+                </div>
+              </div>
+
+              <!-- Message Content -->
+              <div class="flex-grow-1">
+
+                <div class="message-text shadow-sm p-2">
+                  <h6>Meeting Shedule</h6>
+                  <p>
+                    I’m reaching out to introduce GlobalEdge MediaX, a leading
+                    Public Relations and Media agency dedicated
+                    to helping brands build influence, strengthen reputation,
+                    and connect with the right audience across
+                    the globe.
+                    At GlobalEdge MediaX, we go beyond traditional PR. Our team
+                    of communication strategists, media
+                    experts, and storytellers craft impactful campaigns that
+                    design, discover, deliver, and distinguish
+                    your brand in today’s competitive marketplace.
+                  </p>
                 </div>
 
-                  <div class="container-fluid my-4">
-    <!-- User Question -->
-    <div class="ticket-box">
-      <div class="d-flex justify-content-between">
-        <span class="user-name">Sabahd Jignesh</span>
-        <span class="ticket-time">2024-10-17 14:49</span>
-      </div>
-      <p class="mt-2">Hello what is update</p>
-    </div>
-
-    <!-- Agent Reply -->
-    <div class="reply-box d-flex">
-      <div class="">
-        <span class="user-name">Maneesh Kumar</span>
-        <span class="ticket-time">2024-10-17 18:49</span>
-      </div>
-      <div class="msgbox" style="box-shadow: 0 2px 6px rgba(0,0,0,0.1); width: 100%;">
-        <p class="reply-text mt-2">
-        Hello,<br><br>
-        Thank you for connecting with us.<br><br>
-        I have forwarded your concern to our relevant team.<br><br>
-        You will get all updates on the same ticket.<br><br>
-        We appreciate your patience.<br><br>
-        Thank you
-      </p>
-      <p class="reply-signature">
-        =========== <br>
-        Kind Regards,<br>
-        Maneesh K.<br>
-        Customer Success<br>
-        SiteCountry
-      </p>
-      </div>
-    </div>
-  </div>
+                <div class="message-text text-end">10:12AM</div>
+              </div>
             </div>
+
+            <!-- our Massage -->
+
+            <div class="email-card gap-3">
+              <div class="headerprofile d-flex justify-content-end gap-3">
+                <div class="avatarr">
+                  <img src="https://threecoding.com/assets/img/2.png" alt>
+                </div>
+                <div class="nameinfo">
+                  <div class="sender-name">Three Coding</div>
+                  <div class="recipient">www.threecoding.com</div>
+                </div>
+              </div>
+
+              <!-- Message Content -->
+              <div class="flex-grow-1">
+
+                <div class="message-text shadow-sm p-2">
+                  <h6>Ticket Solving</h6>
+                  <p>
+                    I’m reaching out to introduce GlobalEdge MediaX, a leading
+                    Public Relations and Media agency dedicated
+                    to helping brands build influence, strengthen reputation,
+                    and connect with the right audience across
+                    the globe.
+                    At GlobalEdge MediaX, we go beyond traditional PR. Our team
+                    of communication strategists, media
+                    experts, and storytellers craft impactful campaigns that
+                    design, discover, deliver, and distinguish
+                    your brand in today’s competitive marketplace.
+                  </p>
+                </div>
+
+                <div class="message-text text-end">10:30AM</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="reply-box">
+            <!-- Reply Label -->
+            <label for="message" class="form-label fw-bold">Reply:</label>
+
+            <form action>
+              <!-- Message Textarea -->
+              <textarea class="form-control mb-3" id="message" rows="3"
+                placeholder="Write a message"></textarea>
+
+              <!-- File Upload -->
+              <div class="mb-3">
+                <input type="file" class="form-control" id="fileInput"
+                  accept=".jpg,.jpeg,.png,.mp4"
+                  onchange="validateFile(this)">
+                <div class="file-note">(Allowed File Extensions: jpg, png, mp4 —
+                  Max 5 MB)</div>
+                <div id="fileError" class="error-text"></div>
+              </div>
+
+              <!-- Submit Button -->
+              <button class="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>
+
         </div>
 
-
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous">
         </script>
 
-</body>
+        <script>
+            function validateFile(input) {
+    const file = input.files[0];
+    const errorDiv = document.getElementById("fileError");
+    errorDiv.textContent = "";
 
-</html>
+    if (file) {
+      // Allowed types
+      const validTypes = ["image/jpeg", "image/png", "video/mp4"];
+      const maxSize = 5 * 1024 * 1024; // 5MB
+
+      // Check type
+      if (!validTypes.includes(file.type)) {
+        errorDiv.textContent = "Only JPG, PNG images and MP4 videos are allowed.";
+        input.value = ""; // reset input
+        return;
+      }
+
+      // Check size
+      if (file.size > maxSize) {
+        errorDiv.textContent = "File size must be less than 5 MB.";
+        input.value = ""; // reset input
+        return;
+      }
+
+      // Success message (optional)
+      errorDiv.textContent = "Selected: " + file.name;
+      errorDiv.style.color = "green";
+    }
+  }
+        </script>
+
+      </body>
+
+    </html>
